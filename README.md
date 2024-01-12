@@ -19,6 +19,19 @@ Please make sure that you have specified your DATABASE_URL and JWT_SECRET correc
 ```bash
 docker run -p 3000:3000 --env-file .env -d darixsamani/nestjsboilerplate
 ```
+
+or with Docker Compose
+
+```bash
+docker-compose up -d
+
+```
+
+remove all docker-compose images
+
+```bash
+docker-compose rm -vf
+```
  
 
 ## Running E2E Test
