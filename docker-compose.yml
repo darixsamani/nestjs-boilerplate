@@ -1,5 +1,21 @@
 version: '3.3'
 services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - dev-db
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=nest
+      - POSTGRES_SERVER=db
+      - POSTGRES_PORT=5432
+      - PORT=5432
+      - DATABASE_URL="postgresql://postgres:123@localhost:5432/nest?schema=public"
   dev-db:
     image: postgres:13
     ports:
