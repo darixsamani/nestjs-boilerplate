@@ -37,10 +37,7 @@ docker-compose rm -vf
 ## Running E2E Test
 
 ```bash
-# e2e tests
-$ yarn db:test:restart
-$ yarn test:e2e
-
-
+yarn db:test:restart
+yarn test:e2e
 ```
 
